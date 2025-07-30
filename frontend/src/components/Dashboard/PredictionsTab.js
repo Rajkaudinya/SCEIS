@@ -119,3 +119,4 @@ const PredictionsTab = () => {
     </div>
   );
 };
+export default PredictionsTab;

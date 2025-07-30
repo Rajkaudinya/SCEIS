@@ -119,3 +119,4 @@ const HealthScorePredictor = () => {
     </div>
   );
 };
+export default HealthScorePredictor;

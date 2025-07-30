@@ -135,3 +135,4 @@ const ForecastChart = ({ data }) => {
     </div>
   );
 };
+export default ForecastChart;

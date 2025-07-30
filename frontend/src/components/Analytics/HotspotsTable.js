@@ -102,3 +102,4 @@ const HotspotsTable = ({ data }) => {
     </div>
   );
 };
+export default HotspotsTable;

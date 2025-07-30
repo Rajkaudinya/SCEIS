@@ -72,3 +72,4 @@ const ScatterAnalysis = ({ data }) => {
     />
   );
 };
+export default ScatterAnalysis;

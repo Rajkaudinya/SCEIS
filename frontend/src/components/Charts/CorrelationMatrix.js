@@ -64,3 +64,4 @@ const CorrelationMatrix = ({ data }) => {
     />
   );
 };
+export default CorrelationMatrix;

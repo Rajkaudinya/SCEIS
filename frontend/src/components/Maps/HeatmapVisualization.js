@@ -57,3 +57,4 @@ const HeatmapVisualization = ({ data }) => {
     />
   );
 };
+export default HeatmapVisualization;

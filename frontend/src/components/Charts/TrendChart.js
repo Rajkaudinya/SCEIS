@@ -90,3 +90,4 @@ const TrendChart = ({ data }) => {
     />
   );
 };
+export default TrendChart;

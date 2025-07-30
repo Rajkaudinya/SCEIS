@@ -66,3 +66,4 @@ const RadarComparison = ({ data }) => {
     />
   );
 };
+export default RadarComparison;

@@ -120,3 +120,4 @@ const AnalyticsTab = () => {
     </div>
   );
 };
+export default AnalyticsTab;

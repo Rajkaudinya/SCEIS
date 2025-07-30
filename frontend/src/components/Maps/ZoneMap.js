@@ -65,3 +65,4 @@ const ZoneMap = ({ data }) => {
     />
   );
 };
+export default ZoneMap;

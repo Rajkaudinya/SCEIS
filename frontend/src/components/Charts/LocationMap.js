@@ -62,3 +62,4 @@ const LocationMap = ({ locations }) => {
     />
   );
 };
+export default LocationMap;

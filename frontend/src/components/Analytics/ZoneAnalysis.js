@@ -101,3 +101,4 @@ const ZoneAnalysis = ({ data }) => {
     </div>
   );
 };
+export default ZoneAnalysis;

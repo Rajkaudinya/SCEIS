@@ -140,3 +140,4 @@ const GeospatialTab = () => {
     </div>
   );
 };
+export default GeospatialTab;

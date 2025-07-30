@@ -70,3 +70,4 @@ const ClusterChart = ({ data }) => {
     />
   );
 };
+export default ClusterChart;

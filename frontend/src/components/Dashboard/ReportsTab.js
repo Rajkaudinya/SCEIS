@@ -104,3 +104,4 @@ const ReportsTab = () => {
     </div>
   );
 };
+export default ReportsTab;
