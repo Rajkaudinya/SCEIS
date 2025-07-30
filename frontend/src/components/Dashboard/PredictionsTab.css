@@ -1,0 +1,141 @@
+.predictions-tab {
+  padding: 0;
+}
+
+.predictions-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.predictions-header h2 {
+  font-size: 2rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.predictions-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.predictions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.prediction-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.prediction-card:hover {
+  transform: translateY(-2px);
+}
+
+.prediction-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.prediction-card p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.location-selector {
+  margin-bottom: 20px;
+}
+
+.location-selector label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.location-select {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.location-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.performance-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.metric {
+  text-align: center;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 10px;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 5px;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.model-info h4 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.model-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.model-info li {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .predictions-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .performance-metrics {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .prediction-card {
+    padding: 20px;
+  }
+}

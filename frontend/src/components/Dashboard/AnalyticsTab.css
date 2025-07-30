@@ -1,0 +1,97 @@
+.analytics-tab {
+  padding: 0;
+}
+
+.analytics-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.analytics-header h2 {
+  font-size: 2rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.analytics-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.analysis-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.analysis-option {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.analysis-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.analysis-option.active {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+}
+
+.option-icon {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.option-label {
+  font-weight: 600;
+}
+
+.analysis-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+}
+
+.analysis-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.analysis-content p {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .analysis-selector {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .analysis-option {
+    padding: 12px 15px;
+  }
+  
+  .analysis-container {
+    padding: 20px;
+  }
+}

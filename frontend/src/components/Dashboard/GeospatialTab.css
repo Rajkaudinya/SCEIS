@@ -1,0 +1,167 @@
+.geospatial-tab {
+  padding: 0;
+}
+
+.geospatial-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.geospatial-header h2 {
+  font-size: 2rem;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.geospatial-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.visualization-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.visualization-option {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.visualization-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.visualization-option.active {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border-color: #667eea;
+}
+
+.option-header {
+  margin-bottom: 8px;
+}
+
+.option-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.option-description {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.visualization-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  height: 500px;
+}
+
+.visualization-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.visualization-info {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.visualization-info h4 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.info-stats {
+  margin-bottom: 25px;
+}
+
+.info-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.legend h5 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.legend-color.good {
+  background-color: #4CAF50;
+}
+
+.legend-color.moderate {
+  background-color: #FF9800;
+}
+
+.legend-color.unhealthy {
+  background-color: #F44336;
+}
+
+@media (max-width: 768px) {
+  .visualization-selector {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .visualization-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .visualization-content {
+    height: 400px;
+  }
+}

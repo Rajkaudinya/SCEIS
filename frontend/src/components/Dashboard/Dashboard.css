@@ -91,5 +91,29 @@
 
   .tab-content-container {
     padding: 20px;
+    color: #666;
+  }
+}
+
+
+
+.tab.active {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.tab:hover:not(.active) {
+  background: rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .tab {
+    margin-bottom: 5px;
   }
 }

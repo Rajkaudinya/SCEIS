@@ -1,0 +1,153 @@
+.overview-tab {
+  padding: 0;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 600px;
+}
+
+.overview-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-2px);
+}
+
+.overview-card h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.trends-card {
+  grid-row: span 2;
+}
+
+.map-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.alerts-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.alerts-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #f44336;
+  background: rgba(244, 67, 54, 0.1);
+}
+
+.alert-item.high {
+  border-left-color: #f44336;
+  background: rgba(244, 67, 54, 0.1);
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-message {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.alert-time {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.no-alerts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+}
+
+.no-alerts-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+  }
+  
+  .trends-card {
+    grid-row: span 1;
+  }
+  
+  .quick-stats {
+    grid-template-columns: 1fr;
+  }
+}
