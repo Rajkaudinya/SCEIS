@@ -1,17 +1,17 @@
+// File: src/index.js
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.css'; // Ensure this file contains your gradient and UI styles
 import App from './App';
-import ErrorBoundary from './components/Common/ErrorBoundary';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <ErrorBoundary>
+    <BrowserRouter>
       <App />
-    </ErrorBoundary>
+    </BrowserRouter>
   </React.StrictMode>
 );
-
-reportWebVitals();

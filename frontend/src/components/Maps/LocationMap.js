@@ -1,10 +1,11 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
+import './LocationMap.css';
 
 const LocationMap = ({ data }) => {
   if (!data || data.length === 0) {
     return (
-      <div style={{ textAlign: 'center', padding: '40px', color: '#666' }}>
+      <div className="no-data">
         <p>No location data available</p>
       </div>
     );
@@ -37,12 +38,12 @@ const LocationMap = ({ data }) => {
   };
 
   const config = {
-    mapboxAccessToken: 'pk.eyJ1IjoiZGVtb3VzZXIiLCJhIjoiY2ttOGVzdjEyMDBhdjJxcGplODAxMmNvayJ9.z1GEeMff8m09O2NYY5BVEg', // Replace with your real Mapbox token
+    mapboxAccessToken: 'pk.eyJ1IjoiZGVtb3VzZXIiLCJhIjoiY2ttOGVzdjEyMDBhdjJxcGplODAxMmNvayJ9.z1GEeMff8m09O2NYY5BVEg',
     responsive: true
   };
 
   return (
-    <div style={{ width: '100%', height: '400px' }}>
+    <div className="map-container">
       <Plot data={[trace]} layout={layout} config={config} useResizeHandler style={{ width: '100%', height: '100%' }} />
     </div>
   );

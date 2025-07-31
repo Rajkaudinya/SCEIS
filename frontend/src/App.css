@@ -7,14 +7,27 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #333;
+  color: #ffffff;
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .App {
   min-height: 100vh;
 }
+
+/* Gradient Text Utility */
+.gradient-text {
+  background: linear-gradient(45deg, #764ba2, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Example usage:
+   <h1 className="gradient-text">Title</h1>
+*/
 
 /* Loading Spinner */
 .loading {
@@ -42,15 +55,15 @@ body {
   .container {
     padding: 10px;
   }
-  
+
   .header h1 {
     font-size: 2rem;
   }
-  
+
   .tabs {
     flex-direction: column;
   }
-  
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
@@ -66,10 +79,22 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #667eea;
+  background: linear-gradient(45deg, #667eea, #764ba2);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #764ba2;
+  background: linear-gradient(45deg, #5a6fd8, #6a42a0);
+}
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
 }
