@@ -1,6 +1,6 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-import './FeatureImportance.css';
+
 const FeatureImportance = ({ data }) => {
   if (!data || data.length === 0) {
     return (
@@ -13,28 +13,53 @@ const FeatureImportance = ({ data }) => {
   const sortedData = [...data].sort((a, b) => b.importance - a.importance);
 
   const trace = {
-    x: sortedData.map(item => item.feature),
-    y: sortedData.map(item => item.importance),
+    x: sortedData.map(d => d.importance),
+    y: sortedData.map(d => d.feature),
     type: 'bar',
+    orientation: 'h',
     marker: {
-      color: '#42a5f5'
-    }
+      color: sortedData.map((d, i) => `rgba(102, 126, 234, ${1 - i * 0.1})`),
+      line: {
+        color: '#667eea',
+        width: 1
+      }
+    },
+    text: sortedData.map(d => `${(d.importance * 100).toFixed(1)}%`),
+    textposition: 'outside'
   };
 
   const layout = {
-    title: 'Feature Importance Analysis',
-    xaxis: { title: 'Feature' },
-    yaxis: { title: 'Importance Score' },
-    margin: { l: 50, r: 30, t: 50, b: 80 },
+    title: {
+      text: 'Feature Importance in Health Score Prediction',
+      font: { size: 16, color: '#333' }
+    },
+    xaxis: {
+      title: 'Importance Score',
+      showgrid: true,
+      gridcolor: '#f0f0f0'
+    },
+    yaxis: {
+      title: 'Environmental Factors',
+      automargin: true
+    },
+    margin: { l: 120, r: 50, t: 50, b: 50 },
     plot_bgcolor: 'rgba(0,0,0,0)',
     paper_bgcolor: 'rgba(0,0,0,0)',
     font: { family: 'Segoe UI, Arial, sans-serif' }
   };
 
+  const config = {
+    displayModeBar: false,
+    responsive: true
+  };
+
   return (
-    <div style={{ width: '100%', height: '400px' }}>
-      <Plot data={[trace]} layout={layout} config={{ responsive: true }} style={{ width: '100%', height: '100%' }} />
-    </div>
+    <Plot
+      data={[trace]}
+      layout={layout}
+      config={config}
+      style={{ width: '100%', height: '400px' }}
+    />
   );
 };
 

@@ -63,7 +63,7 @@
 
 .predict-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
 }
 
 .predict-btn:disabled {
@@ -72,57 +72,58 @@
 }
 
 .prediction-result {
-  background: #f5f5f5;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .score-display {
-  margin-bottom: 15px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .score-value {
   font-size: 3rem;
   font-weight: bold;
-  color: #667eea;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 5px;
 }
 
 .score-label {
-  font-size: 1.2rem;
-  color: #444;
+  color: #666;
+  font-size: 1rem;
 }
 
 .risk-level {
-  margin: 10px 0;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .risk-badge {
-  display: inline-block;
-  padding: 5px 12px;
+  padding: 8px 16px;
   border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: white;
+  font-weight: 600;
   text-transform: uppercase;
+  font-size: 0.9rem;
 }
 
 .risk-badge.low {
-  background-color: #4caf50;
+  background: #4CAF50;
+  color: white;
 }
 
 .risk-badge.moderate {
-  background-color: #ff9800;
+  background: #FF9800;
+  color: white;
 }
 
 .risk-badge.high {
-  background-color: #f44336;
-}
-
-.recommendations {
-  margin-top: 20px;
-  text-align: left;
+  background: #F44336;
+  color: white;
 }
 
 .recommendations h5 {
@@ -131,11 +132,14 @@
 }
 
 .recommendations ul {
-  padding-left: 20px;
-  list-style-type: disc;
+  list-style: none;
+  padding: 0;
 }
 
 .recommendations li {
-  margin-bottom: 6px;
-  color: #555;
+  padding: 8px 12px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
 }

@@ -25,12 +25,10 @@ const HotspotsTable = ({ data }) => {
   const sortedData = [...data].sort((a, b) => {
     let aVal = a[sortField];
     let bVal = b[sortField];
-    
-    if (typeof aVal === 'string') {
-      aVal = aVal.toLowerCase();
-      bVal = bVal.toLowerCase();
-    }
-    
+
+    if (typeof aVal === 'string') aVal = aVal.toLowerCase();
+    if (typeof bVal === 'string') bVal = bVal.toLowerCase();
+
     if (sortDirection === 'asc') {
       return aVal > bVal ? 1 : -1;
     } else {
@@ -39,7 +37,7 @@ const HotspotsTable = ({ data }) => {
   });
 
   const getSeverityColor = (severity) => {
-    switch (severity.toLowerCase()) {
+    switch ((severity || '').toLowerCase()) {
       case 'critical': return '#F44336';
       case 'high': return '#FF9800';
       case 'medium': return '#FFC107';
@@ -73,24 +71,24 @@ const HotspotsTable = ({ data }) => {
         </thead>
         <tbody>
           {sortedData.map((hotspot, index) => (
-            <tr key={index} className={`severity-${hotspot.severity.toLowerCase()}`}>
+            <tr key={index} className={`severity-${(hotspot.severity || 'unknown').toLowerCase()}`}>
               <td>
                 <div className="location-cell">
-                  <strong>{hotspot.location}</strong>
-                  <small>{hotspot.zone}</small>
+                  <strong>{hotspot.location || 'Unknown'}</strong>
+                  <small>{hotspot.zone || 'Zone N/A'}</small>
                 </div>
               </td>
               <td>
-                <span 
+                <span
                   className="severity-badge"
                   style={{ backgroundColor: getSeverityColor(hotspot.severity) }}
                 >
-                  {hotspot.severity}
+                  {hotspot.severity || 'Unknown'}
                 </span>
               </td>
-              <td>{hotspot.aqi}</td>
-              <td>{hotspot.pm25} μg/m³</td>
-              <td>{hotspot.population.toLocaleString()}</td>
+              <td>{hotspot.aqi ?? 'N/A'}</td>
+              <td>{hotspot.pm25 != null ? `${hotspot.pm25} μg/m³` : 'N/A'}</td>
+              <td>{hotspot.population != null ? hotspot.population.toLocaleString() : 'N/A'}</td>
               <td>
                 <button className="action-btn view">View</button>
                 <button className="action-btn alert">Alert</button>
@@ -102,4 +100,5 @@ const HotspotsTable = ({ data }) => {
     </div>
   );
 };
+
 export default HotspotsTable;
